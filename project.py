@@ -69,9 +69,14 @@ def generate_plot():
 if __name__ == '__main__':
     # os.makedirs('static', exist_ok=True)  # Create 'static' directory if it doesn't exist
     # app.run(host='0.0.0.0', port=8000)
-    static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
+    # static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
+    # os.makedirs(static_dir, exist_ok=True)  # Create 'static' directory if it doesn't exist
+    # app.run(host='0.0.0.0', port=8000)
+     jenkins_home = os.path.expanduser('~jenkins')  # Modify 'jenkins' to the actual Jenkins username
+    static_dir = os.path.join(jenkins_home, 'static')
     os.makedirs(static_dir, exist_ok=True)  # Create 'static' directory if it doesn't exist
     app.run(host='0.0.0.0', port=8000)
+
 
 # plt.ylabel('y')
 # plt.title('Graph of the Quadratic Equation')
