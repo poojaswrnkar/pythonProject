@@ -67,7 +67,10 @@ def generate_plot():
     plt.close()  # Close the plot to prevent displaying in the console
 
 if __name__ == '__main__':
-    os.makedirs('static', exist_ok=True)  # Create 'static' directory if it doesn't exist
+    # os.makedirs('static', exist_ok=True)  # Create 'static' directory if it doesn't exist
+    # app.run(host='0.0.0.0', port=8000)
+    static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
+    os.makedirs(static_dir, exist_ok=True)  # Create 'static' directory if it doesn't exist
     app.run(host='0.0.0.0', port=8000)
 
 # plt.ylabel('y')
