@@ -29,6 +29,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 from flask import Flask, render_template
+app.debug = True
 
 app = Flask(__name__)
 
