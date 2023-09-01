@@ -80,7 +80,7 @@ if __name__ == '__main__':
     user_home = os.path.expanduser('~')  # Get the home directory of the user (Jenkins)
     static_dir = os.path.join(user_home, 'static')
     os.makedirs(static_dir, exist_ok=True)  # Create 'static' directory if it doesn't exist
-    app.run(host='0.0.0.0', port=8081)
+    app.run(host='0.0.0.0', port=5000)
 
 
 # plt.ylabel('y')
