@@ -134,8 +134,15 @@ def generate_plot(a, b, c):
     plt.title('Graph of the Quadratic Equation')
     plt.grid(True)
     plt.legend()
-    plt.savefig('static/plot.png')  # Save the plot image
+    static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
+    os.makedirs(static_dir, exist_ok=True)
+    plot_path = os.path.join(static_dir, 'plot.png')
+    plt.savefig(plot_path)
+    
     plt.close()  # Close the plot to prevent displaying in the console
+    
+    # plt.savefig('static/plot.png')  # Save the plot image
+    # plt.close()  # Close the plot to prevent displaying in the console
 
 if __name__ == '__main__':
     os.makedirs('static', exist_ok=True)  # Create 'static' directory if it doesn't exist
