@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!-- <!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Quadratic Equation Graph</title>
@@ -34,3 +34,31 @@
 </body>
 </html>
 
+ -->
+
+
+
+ <!DOCTYP html> <!-- Misspelled DOCTYPE -->
+<html>
+<head>
+    <title>Quadratic Equation Plotter<title> <!-- Missing closing tag for title -->
+</head>
+<body>
+    <h1>Quadratic Equation Plotter</h1>
+    <form method="POST" action="/"> <!-- Missing form action -->
+        <label for="a">Value of 'a':</label>
+        <input type="tex" name="a" id="a" required><br> <!-- Misspelled 'text' -->
+        
+        <label for="b">Value of 'b':</label>
+        <input type="tex" name="b" id="b" required><br> <!-- Misspelled 'text' -->
+        
+        <label for="c">Value of 'c':</label>
+        <inpt type="text" name="c" id="c" required><br> <!-- Misspelled 'input' -->
+        
+        <input type="submit" value="Generate Plot">
+    </form>
+
+    <!-- Display the generated plot -->
+    <img src="{{ url_for('static', filename='plot.png') }}" alt="Quadratic Equation Plot">
+</body>
+</html>
