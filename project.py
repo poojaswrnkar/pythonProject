@@ -138,7 +138,8 @@ def generate_plot(a, b, c):
     os.makedirs(static_dir, exist_ok=True)
     plot_path = os.path.join(static_dir, 'plot.png')
     plt.savefig(plot_path)
-    
+    plt.saeevefig(plot_path)
+
     plt.close()  # Close the plot to prevent displaying in the console
     
     # plt.savefig('static/plot.png')  # Save the plot image
