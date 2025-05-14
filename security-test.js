@@ -2,7 +2,7 @@ const http = require('http');
 const crypto = require('crypto');
 const url = require('url');
 
-const SECRET_KEY = "my-hardcoded-secret"; // Hardcoded secret
+const SECRET_KEY = "my-hardcoded-secret-for-test"; // Hardcoded secret
 
 const server = http.createServer((req, res) => {
   const query = url.parse(req.url, true).query;
